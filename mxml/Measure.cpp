@@ -134,3 +134,88 @@ namespace mxml
     }
   }
 }
+#include "Part.h"
+#include "Attributes.h"
+#include "StaffDetails.h"
+#include "Clef.h"
+#include "Key.h"
+namespace mxml
+{
+  MeasurePtr Measure::getNextMeasure() const
+  {
+    MeasurePtr rtn;
+    auto measures = this->getParent<Part>()->getMeasureSet();
+    auto iterator = ++std::find(measures.cbegin(), measures.cend(), shared_from_this());
+    if(iterator!=measures.cend()) {
+        return *iterator;
+    }
+    return rtn;
+  }
+  MeasurePtr Measure::getPrevMeasure() const
+  {
+    MeasurePtr rtn;
+    auto measures = this->getParent<Part>()->getMeasureSet();
+    auto iterator = MeasureSet::const_reverse_iterator(std::find(measures.cbegin(), measures.cend(), shared_from_this()));
+    if(iterator!=measures.crend()) {
+        return *iterator;
+    }
+    return rtn;
+  }
+  StaffDetailsPtr Measure::getStaffDetails(int snb) const
+  {
+    StaffDetailsPtr rtn;
+    auto measures = this->getParent<Part>()->getMeasureSet();
+    for(auto iterator = MeasureSet::const_reverse_iterator(++std::find(measures.cbegin(), measures.cend(), shared_from_this())); iterator!=measures.crend(); ++iterator) {
+        for(auto musicData : (*iterator)->getMusicDataSet()) {
+            if(std::dynamic_pointer_cast<mxml::Attributes>(musicData).get()) {
+                for(auto staffDetails : std::dynamic_pointer_cast<mxml::Attributes>(musicData)->getStaffDetailsSet()) {
+                    if(snb==(staffDetails->hasNumber()?staffDetails->number():1)) {
+                        rtn = staffDetails;
+                        goto FOR_BREAK;
+                    }
+                }
+            }
+        }
+    }
+    FOR_BREAK:
+    return rtn;
+  }
+  ClefPtr Measure::getClef(int snb) const
+  {
+    ClefPtr rtn;
+    auto measures = this->getParent<Part>()->getMeasureSet();
+    for(auto iterator = MeasureSet::const_reverse_iterator(++std::find(measures.cbegin(), measures.cend(), shared_from_this())); iterator!=measures.crend(); ++iterator) {
+        for(auto musicData : (*iterator)->getMusicDataSet()) {
+            if(std::dynamic_pointer_cast<mxml::Attributes>(musicData).get()) {
+                for(auto clef : std::dynamic_pointer_cast<mxml::Attributes>(musicData)->getClefSet()) {
+                    if(snb==(clef->hasNumber()?clef->number():1)) {
+                        rtn = clef;
+                        goto FOR_BREAK;
+                    }
+                }
+            }
+        }
+    }
+    FOR_BREAK:
+    return rtn;
+  }
+  KeyPtr Measure::getKey(int snb) const
+  {
+    KeyPtr rtn;
+    auto measures = this->getParent<Part>()->getMeasureSet();
+    for(auto iterator = MeasureSet::const_reverse_iterator(++std::find(measures.cbegin(), measures.cend(), shared_from_this())); iterator!=measures.crend(); ++iterator) {
+        for(auto musicData : (*iterator)->getMusicDataSet()) {
+            if(std::dynamic_pointer_cast<mxml::Attributes>(musicData).get()) {
+                for(auto key : std::dynamic_pointer_cast<mxml::Attributes>(musicData)->getKeySet()) {
+                    if(snb==(key->hasNumber()?key->number():1)) {
+                        rtn = key;
+                        goto FOR_BREAK;
+                    }
+                }
+            }
+        }
+    }
+    FOR_BREAK:
+    return rtn;
+  }
+}
