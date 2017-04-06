@@ -87,6 +87,77 @@
                 0.0, 
                 -0.012
             ]
+        },
+
+        "accidentalFlat": {
+            "bBoxNE": [
+                0.904, 
+                1.756
+            ], 
+            "bBoxSW": [
+                0.0, 
+                -0.7
+            ]
+        }, 
+        "accidentalNatural": {
+            "bBoxNE": [
+                0.672, 
+                1.364
+            ], 
+            "bBoxSW": [
+                0.0, 
+                -1.34
+            ]
+        }, 
+        "accidentalSharp": {
+            "bBoxNE": [
+                0.996, 
+                1.4
+            ], 
+            "bBoxSW": [
+                0.0, 
+                -1.392
+            ]
+        }, 
+        "accidentalDoubleSharp": {
+            "bBoxNE": [
+                0.988, 
+                0.508
+            ], 
+            "bBoxSW": [
+                0.0, 
+                -0.5
+            ]
+        },
+        "accidentalDoubleFlat": {
+            "bBoxNE": [
+                1.644, 
+                1.748
+            ], 
+            "bBoxSW": [
+                0.0, 
+                -0.7
+            ]
+        }, 
+        "accidentalParensLeft": {
+            "bBoxNE": [
+                0.564, 
+                0.988
+            ], 
+            "bBoxSW": [
+                0.0, 
+                -0.992
+            ]
+        }, 
+        "accidentalParensRight": {
+            "bBoxNE": [
+                0.564, 
+                0.988
+            ], 
+            "bBoxSW": [
+                0.0, 
+                -0.992
+            ]
         }
     }
 }

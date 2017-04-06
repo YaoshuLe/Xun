@@ -18,6 +18,8 @@ int main(int argc, char** argv) {
   QApplication app(argc, argv);
 
   TestClef testclef;
-   return QTest::qExec(&testclef, argc, argv);
+  TestKey testkey;
+  return QTest::qExec(&testclef, argc, argv) |
+         QTest::qExec(&testkey, argc, argv);
 }
 

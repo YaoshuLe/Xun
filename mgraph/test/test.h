@@ -15,3 +15,12 @@ class TestClef: public QObject
     void test4stringTabClef();
     void testPercussion();
 };
+
+class TestKey: public QObject
+{
+  Q_OBJECT
+  private slots:
+    void testCSharpMajor();
+    void testCFlatMajor();
+    void testCNaturalFlatMajor();
+};

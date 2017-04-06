@@ -259,13 +259,16 @@ SOURCES +=\
     MSvgRenderer.cpp \
     Symbol.cpp \
     main.cpp \
-    test/TestClef.cpp
+    test/TestClef.cpp \
+    test/TestKey.cpp \
+    Key.cpp
 
 HEADERS  += \
     Clef.h \
     MSvgRenderer.h \
     Symbol.h \
-    test/test.h
+    test/test.h \
+    Key.h
 
 RESOURCES += \
     resource.qrc
