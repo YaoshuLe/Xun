@@ -1,0 +1,92 @@
+{
+    "fontName": "Bravura", 
+    "fontVersion": 1.18, 
+
+    "engravingDefaults": {
+        "spatium": 410,
+        "magnification": 0.05
+    }, 
+
+    "glyphBBoxes": {
+        "gClef": {
+            "bBoxNE": [
+                2.684, 
+                4.392
+            ], 
+            "bBoxSW": [
+                0.0, 
+                -2.632
+            ]
+        }, 
+        "cClef": {
+            "bBoxNE": [
+                2.796, 
+                2.024
+            ], 
+            "bBoxSW": [
+                0.0, 
+                -2.024
+            ]
+        }, 
+        "fClef": {
+            "bBoxNE": [
+                2.736, 
+                1.048
+            ], 
+            "bBoxSW": [
+                -0.02, 
+                -2.54
+            ]
+        }, 
+        "unpitchedPercussionClef1": {
+            "bBoxNE": [
+                1.528, 
+                1.0
+            ], 
+            "bBoxSW": [
+                0.0, 
+                -1.0
+            ]
+        }, 
+        "6stringTabClef": {
+            "bBoxNE": [
+                1.632, 
+                3.056
+            ], 
+            "bBoxSW": [
+                -0.012, 
+                -2.992
+            ]
+        },
+        "4stringTabClef": {
+            "bBoxNE": [
+                1.088, 
+                2.016
+            ], 
+            "bBoxSW": [
+                -0.012, 
+                -2.032
+            ]
+        }, 
+        "clef8": {
+            "bBoxNE": [
+                0.82, 
+                0.988
+            ], 
+            "bBoxSW": [
+                0.0, 
+                0.0
+            ]
+        }, 
+        "clef15": {
+            "bBoxNE": [
+                1.436, 
+                1.02
+            ], 
+            "bBoxSW": [
+                0.0, 
+                -0.012
+            ]
+        }
+    }
+}

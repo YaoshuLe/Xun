@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>bravura.svg</file>
+        <file>bravura_metadata.json</file>
+    </qresource>
+</RCC>

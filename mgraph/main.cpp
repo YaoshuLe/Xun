@@ -1,3 +1,4 @@
+/*
 #include "ScoreView.h"
 #include <QApplication>
 
@@ -9,3 +10,14 @@ int main(int argc, char *argv[])
 
   return a.exec();
 }
+*/
+
+#include "test/test.h"
+
+int main(int argc, char** argv) {
+  QApplication app(argc, argv);
+
+  TestClef testclef;
+   return QTest::qExec(&testclef, argc, argv);
+}
+
