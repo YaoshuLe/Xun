@@ -19,7 +19,9 @@ int main(int argc, char** argv) {
 
   TestClef testclef;
   TestKey testkey;
+  TestTime testtime;
   return QTest::qExec(&testclef, argc, argv) |
-         QTest::qExec(&testkey, argc, argv);
+         QTest::qExec(&testkey, argc, argv) |
+         QTest::qExec(&testtime, argc, argv);
 }
 

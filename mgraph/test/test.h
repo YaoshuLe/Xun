@@ -24,3 +24,13 @@ class TestKey: public QObject
     void testCFlatMajor();
     void testCNaturalFlatMajor();
 };
+
+class TestTime: public QObject
+{
+  Q_OBJECT
+  private slots:
+    void testSenzaMisura();
+    void testTimeSigCommon();
+    void testTimeSigCutCommon();
+    void testBeat();
+};

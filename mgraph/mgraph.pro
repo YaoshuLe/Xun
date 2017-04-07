@@ -261,14 +261,17 @@ SOURCES +=\
     main.cpp \
     test/TestClef.cpp \
     test/TestKey.cpp \
-    Key.cpp
+    Key.cpp \
+    Time.cpp \
+    test/TestTime.cpp
 
 HEADERS  += \
     Clef.h \
     MSvgRenderer.h \
     Symbol.h \
     test/test.h \
-    Key.h
+    Key.h \
+    Time.h
 
 RESOURCES += \
     resource.qrc
